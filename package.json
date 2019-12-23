@@ -1,0 +1,40 @@
+{
+  "name": "@antv/f2-context",
+  "version": "0.0.0",
+  "description": "F2针对多端的context适配",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "types": "esm/index.d.ts",
+  "files": [
+    "package.json",
+    "esm",
+    "lib",
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc -d -p tsconfig.json --target ES5 --module ESNext --outDir esm",
+    "build:cjs": "tsc -d -p tsconfig.json --target ES5 --module umd --outDir lib",
+    "clean": "rm -rf esm lib"
+  },
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^3.7.4"
+  },
+  "homepage": "https://github.com/antvis/f2-contex",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antvis/f2-context"
+  },
+  "author": "https://github.com/orgs/antvis/people",
+  "bugs": {
+    "url": "https://github.com/antvis/f2-context/issues"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
