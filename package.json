@@ -1,6 +1,6 @@
 {
   "name": "@antv/f2-context",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "F2针对多端的context适配",
   "main": "lib/index.js",
   "module": "esm/index.js",
@@ -16,7 +16,7 @@
   "scripts": {
     "build": "npm run clean && npm run build:esm && npm run build:cjs",
     "build:esm": "tsc -d -p tsconfig.json --target ES5 --module ESNext --outDir esm",
-    "build:cjs": "tsc -d -p tsconfig.json --target ES5 --module umd --outDir lib",
+    "build:cjs": "tsc -d -p tsconfig.json --target ES5 --module CommonJS --outDir lib",
     "clean": "rm -rf esm lib"
   },
   "keywords": [],
